@@ -9,11 +9,33 @@ def main():
     x, y = 10, 100
 
     # conditional flow uses if, elif, else
+    if x < y:
+        result = 'x less than y'
+    elif x == y:
+        result = 'x equal y'
+    else:
+        result = 'x greater than y'
+    
+    print(result)
 
     # conditional statements let you use "a if C else b"
+    result = 'x less than y' if(x < y) else 'x graeter than y'
+
+    print(result)
 
     # match-case makes it easy to compare multiple values
-    value = "one"
+    value = "two"
+    match value:
+        case 'one':
+            result = 1
+        case 'two':
+            result = 2
+        case 'three' | 'four':
+            result = (3, 4)
+        case _:
+            result = -1
+        
+    print(result)
 
 if __name__ == "__main__":
     main()
